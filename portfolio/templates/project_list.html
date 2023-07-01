@@ -1,0 +1,24 @@
+<body>
+    hello
+</body>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th>URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for project in projects %}
+      <tr>
+        <td>{{ project.title }}</td>
+        <td>{{ project.description }}</td>
+        <td><img src="{{ project.image.url }}" alt="{{ project.title }}"></td>
+        <td><a href="{{ project.url }}">{{ project.url }}</a></td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
